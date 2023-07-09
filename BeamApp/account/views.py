@@ -25,7 +25,7 @@ def user_login(request):
 
 from django.contrib.auth.decorators import login_required
 @login_required
-def calculator(request):
+def about(request):
     return render(request,
-        'account/calculator.html',
-        {'section': 'dashboard'})
+        'account/about.html',
+        {'section': 'about'})
