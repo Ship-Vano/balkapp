@@ -35,12 +35,13 @@ import math
 from scipy.optimize import minimize
 from scipy.optimize import Bounds
 
-
+from django.contrib.auth.decorators import login_required
+@login_required
 def index(request):
     form = InputForm()
     return render(request, 'work/numbers.html', {'form': form})
 
-
+@login_required
 def create(request):
     form = InputForm(request.POST)
     rez1 = None  # Initialize rez1 with a default value

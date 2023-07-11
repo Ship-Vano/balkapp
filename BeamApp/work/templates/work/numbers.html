@@ -1,19 +1,16 @@
+{% extends "base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Beam Calculator</title>
-	<link rel="stylesheet" type="text/css" href="{% static 'numbers.css' %}">
-</head>
-<body>
+{% block title %}Beam Calculator{% endblock %}
+{% block content %}
+
     <h1>Beam Calculator</h1>
     <form method="POST" action="#">
         {% csrf_token %}
 		{{ form.as_p }}
-        
+
 
         <button type="submit">Start Solution</button><br>
-  
+
         <img src="{% static 'work/images/1.png' %}" alt="Scheme"><br>
 	{% if rez1 and rez2 %}
 		<h2>Результаты</h2>
@@ -28,5 +25,6 @@
 			</tr>
 		</table>
 	{% endif %}
-</body>
-</html>
+
+
+{% endblock %}

@@ -33,5 +33,5 @@ urlpatterns = [
 
     path('', include('django.contrib.auth.urls')),
     path('', views.about, name='about'),
-    path('work/', include('work.urls', namespace='work')),
+    #path('work/', include('work.urls', namespace='work')),
 ]
