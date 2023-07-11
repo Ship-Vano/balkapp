@@ -10,15 +10,16 @@
         <span class="logo">БАЛКА ОНЛАЙН</span>
         {% if request.user.is_authenticated %}
           <ul class="menu">
+              <li {% if section == "about" %}class="selected"{% endif %}>
+                <a href="{% url "about" %}">О программе</a>
+              </li>
               <li {% if section == "calculator" %}class="selected"{% endif %}>
-               <a href="{% url "calculator" %}">Калькулятор</a>
+               <a href="{% url "work:index" %}">Калькулятор</a>
               </li>
               <li {% if section == "images" %}class="selected"{% endif %}>
                 <a href="#">Форум</a>
               </li>
-              <li {% if section == "people" %}class="selected"{% endif %}>
-                <a href="#">О программе</a>
-              </li>
+
           </ul>
         {% endif %}
         <span class="user">

@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Beam Calculator</title>
+</head>
+<body>
+    <h1>Beam Calculator</h1>
+    <form method="POST" action="create/">
+        {% csrf_token %}
+        <label for="Input A1">A1:</label>
+        <input type="number" id="A1_var" name="A1_var" value="{{scheme.A1_var}}"><br>
+
+        <label for="A3_var">A3:</label>
+        <input type="number" id="A3_var" name="A3_var" value="{{scheme.A3_var}}"><br>
+
+        <label for="A4_var">A4:</label>
+        <input type="number" id="A4_var" name="A4_var" value="{{scheme.A4_var}}"><br>
+
+        <label for="E1_var">E1:</label>
+        <input type="number" id="E1_var" name="E1_var" value="{{scheme.E1_var}}"><br>
+
+        <label for="E2_var">E2:</label>
+        <input type="number" id="E2_var" name="E2_var" value="{{scheme.E2_var}}"><br>
+
+        <label for="E3_var">E3:</label>
+        <input type="number" id="E3_var" name="E3_var" value="{{scheme.E3_var}}"><br>
+
+        <label for="E4_var">E4:</label>
+        <input type="number" id="E4_var" name="E4_var" value="{{scheme.E4_var}}"><br>
+
+        <label for="L1_var">L1:</label>
+        <input type="number" id="L1_var" name="L1_var" value="{{scheme.L1_var}}"><br>
+
+        <label for="L3_var">L3:</label>
+        <input type="number" id="L3_var" name="L3_var" value="{{scheme.L3_var}}"><br>
+
+        <label for="L4_var">L4:</label>
+        <input type="number" id="L4_var" name="L4_var" value="{{scheme.L4_var}}"><br>
+
+        <label for="F1_var">F1:</label>
+        <input type="number" id="F1_var" name="F1_var" value="{{scheme.F1_var}}"><br>
+
+        <label for="F2_var">F2:</label>
+        <input type="number" id="F2_var" name="F2_var" value="{{scheme.F2_var}}"><br>
+
+        <button type="submit">Start Solution</button><br>
+        
+        <img src="{% static 'work/images/1.png' %}" alt="Scheme"><br>
+        <label for="optimization_method">Optimization Method:</label><br>
+        <input type="radio" id="downhill" name="optimization_method" value="downhill">
+        <label for="downhill">Downhill</label><br>
+
+        <input type="radio" id="L-BFGS-B" name="optimization_method" value="L-BFGS-B">
+        <label for="L-BFGS-B">L-BFGS-B</label><br>
+    </form>
+	
+	{% if parameters.count > 0 %}
+    <h2>Результаты</h2>
+    <table>
+        <thead><th>A2</th><th>L2</th><th></th></thead>
+        {% for parameters in scheme %}
+        <tr>
+            <td>{{ scheme.rez1 }}</td>
+            <td>{{ scheme.rez2 }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+	
+</body>
+</html>
