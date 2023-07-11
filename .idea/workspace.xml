@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b729c5e0-7e82-4b0a-87e5-8bbc052016fe" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/BeamApp/work/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeamApp/BeamApp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/BeamApp/BeamApp/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeamApp/account/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/BeamApp/account/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeamApp/account/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/BeamApp/account/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeamApp/work/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/BeamApp/work/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeamApp/work/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/BeamApp/work/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeamApp/work/templates/work/numbers.html" beforeDir="false" afterPath="$PROJECT_DIR$/BeamApp/work/templates/work/numbers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeamApp/work/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/BeamApp/work/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeamApp/work/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/BeamApp/work/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="b729c5e0-7e82-4b0a-87e5-8bbc052016fe" name="Changes" comment="Fixed the URL's" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,6 +58,19 @@
       <option name="presentableId" value="Default" />
       <updated>1688811096447</updated>
     </task>
+    <task id="LOCAL-00001" summary="Fixed the URL's">
+      <option name="closed" value="true" />
+      <created>1689094792495</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1689094792495</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fixed the URL's" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed the URL's" />
   </component>
 </project>
