@@ -8,11 +8,13 @@
 		<div class="row">
 			<div class="col">
 				<form method="POST" action="#">
-					{% csrf_token %}
-					{{ form.as_p }}
-				</form>
+					<div class="col">
+						{% csrf_token %}
+						{{ form.as_p }}
+					
+					</div>
 			</div>
-			<div class="col">
+			<div class="col" method="POST" action="#" >
 				<img src="{% static 'work/images/1.png' %}" alt="Scheme"><br>
 				<button type="submit">Start Solution</button><br>
 				{% if rez1 and rez2 %}
