@@ -2,29 +2,37 @@
 {% load static %}
 {% block title %}Beam Calculator{% endblock %}
 {% block contents %}
-
-    <h1>Beam Calculator</h1>
-    <form method="POST" action="#">
-        {% csrf_token %}
-		{{ form.as_p }}
-
-
-        <button type="submit">Start Solution</button><br>
-
-        <img src="{% static 'work/images/1.png' %}" alt="Scheme"><br>
-	{% if rez1 and rez2 %}
-		<h2>Результаты</h2>
-		<table>
-			<thead>
-				<th>A2</th>
-				<th>L2</th>
-			</thead>
-			<tr>
-				<td>{{ rez1 }}</td>
-				<td>{{ rez2 }}</td>
-			</tr>
-		</table>
+<body>
+    <h1>Калькулятор</h1>
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<form method="POST" action="#">
+					{% csrf_token %}
+					{{ form.as_p }}
+				</form>
+			</div>
+			<div class="col">
+				<img src="{% static 'work/images/1.png' %}" alt="Scheme"><br>
+				<button type="submit">Start Solution</button><br>
+				{% if rez1 and rez2 %}
+				<h2>Результаты</h2>
+				<div class="container-fluid text-center">
+					<table>
+						<thead>
+							<th>A2</th>
+							<th>L2</th>
+						</thead>
+						<tr>
+							<td>{{ rez1 }}</td>
+							<td>{{ rez2 }}</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
 	{% endif %}
-
+</body>
 
 {% endblock %}
