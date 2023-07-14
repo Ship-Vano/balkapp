@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'account.apps.AccountConfig',
+    'about.apps.AboutConfig'
     'work.apps.WorkConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -126,7 +127,9 @@ STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
-    'account/static', 'work/static'
+    'account/static',
+    'work/static',
+    'about/static'
 ]
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
