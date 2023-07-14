@@ -25,7 +25,7 @@ def user_login(request):
 
 from django.contrib.auth.decorators import login_required
 @login_required
-def about(request):
+def accountpage(request):
     return render(request,
-        'account/about.html',
-        {'section': 'about'})
+        'account/account.html',
+        {'section': 'account'})
