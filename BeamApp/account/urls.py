@@ -33,5 +33,6 @@ urlpatterns = [
 
     path('', include('django.contrib.auth.urls')),
     path('', views.accountpage, name='account'),
+    path('register/', views.register, name='register'),
     #path('work/', include('work.urls', namespace='work')),
 ]
