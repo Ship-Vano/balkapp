@@ -4,7 +4,7 @@
 {% block contents %}
 <body>
     <h1>Калькулятор</h1>
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row">
 			<div class="col">
 				<form method="POST" action="#">
@@ -15,26 +15,35 @@
 					</div>
 			</div>
 			<div class="col" method="POST" action="#" >
-				<img src="{% static 'work/images/1.png' %}" alt="Scheme"><br>
-				<button type="submit">Start Solution</button><br>
-				{% if rez1 and rez2 %}
-				<h2>Результаты</h2>
-				<div class="container-fluid text-center">
-					<table>
-						<thead>
-							<th>A2</th>
-							<th>L2</th>
-						</thead>
-						<tr>
-							<td>{{ rez1 }}</td>
-							<td>{{ rez2 }}</td>
-						</tr>
-					</table>
+				<div class="row">
+					<img src="{% static 'work/images/1.png' %}" alt="Scheme"><br>
 				</div>
+				<div class="row p-3">
+					<div class="d-grid gap-1 col-6 mx-auto">
+					<button type="submit" class="btn btn-outline-success">Вычислить</button>
+					</div>
+				</div>
+				{% if rez1 and rez2 %}
+				<div class="row p-3">
+<!--					<h2>Результаты</h2>-->
+						<table class="table-light table-bordered border-success align-middle">
+							<tr>
+								<th colspan="2">Результаты</th>
+							</tr>
+							<tr>
+								<th>A2</th>
+								<th>L2</th>
+							</tr>
+							<tr>
+								<td>{{ rez1 }}</td>
+								<td>{{ rez2 }}</td>
+							</tr>
+						</table>
+				</div>
+				{% endif %}
 			</div>
 		</div>
 	</div>
-	{% endif %}
 </body>
 
 {% endblock %}
