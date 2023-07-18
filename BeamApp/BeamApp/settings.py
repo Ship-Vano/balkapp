@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'account.apps.AccountConfig',
     'about.apps.AboutConfig',
     'work.apps.WorkConfig',
+    'spring.apps.SpringConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

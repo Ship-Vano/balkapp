@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Beam Calculator{% endblock %}
+{% block contents %}
+<body>
+    <h1>Калькулятор</h1>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col">
+				<form method="POST" action="#">
+					<div class="col">
+						{% csrf_token %}
+						{{ form.as_p }}
+					
+					</div>
+			</div>
+			<div class="col" method="POST" action="#" >
+				<div class="row">
+					<img src="{% static 'spring/images/spring.png' %}" alt="Scheme"><br>
+				</div>
+				<div class="row p-3">
+					<div class="d-grid gap-1 col-6 mx-auto">
+					<button type="submit" class="btn btn-outline-success">Вычислить</button>
+					</div>
+				</div>
+				
+				{% if rez1 and rez2 %}
+				<div class="row p-3">
+<!--					<h2>Результаты</h2>-->
+						<table class="table-light table-bordered border-success align-middle">
+							<tr>
+								<th colspan="2">Результаты</th>
+							</tr>
+							<tr>
+								<th>C2</th>
+								<th>e2</th>
+							</tr>
+							<tr>
+								<td>{{ rez1 }}</td>
+								<td>{{ rez2 }}</td>
+							</tr>
+						</table>
+				</div>
+				{% endif %}
+				<div class= "row p-2"> </div>
+				<div class= "row p-2"> </div>
+				<div class= "row p-2"> </div>
+				<div class= "row p-2"> </div>
+				<div class= "row p-2"> </div>
+				<div class= "row p-2"> </div>
+				<div class= "row p-2"> </div>
+				<div class= "row p-2"> </div>
+			</div>
+		</div>
+	</div>
+</body>
+
+{% endblock %}
