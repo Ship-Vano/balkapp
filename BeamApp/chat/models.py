@@ -37,7 +37,8 @@ class Discussion(models.Model):
 class Profile(models.Model):
     user = models.OneToOneField(User, null=True, blank=True, on_delete=models.CASCADE)
     image = models.ImageField(upload_to="images/", default="default/user.png")
-
+    def __str__(self):
+        return str(self.user)
 
 
 
