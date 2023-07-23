@@ -28,16 +28,7 @@ def user_login(request):
 from django.contrib.auth.decorators import login_required
 @login_required
 def accountpage(request):
-    if request.method == "POST":
-        current_user = User.objects.get(id=request.user.id)
-        form = ProfileForm(data=request.POST, instance=request.user.profile)
-        if form.is_valid():
-            form.save()
-            #login(request, current_user)
-            return render(request, "account/accountpage.html", {'form': form})
-    else:
-        form = ProfileForm()
-    return render(request, 'account/accountpage.html', {'form': form})
+    return render(request, 'account/accountpage.html')
 
 
 

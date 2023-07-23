@@ -33,13 +33,9 @@
                                     Email: <strong class="float-right">{{request.user.email}}</strong>
                                 </li>
                                 <li class="list-group-item">
-                                    <form action="/account/" enctype="multipart/form-data" method="POST">
-                                        {% csrf_token %}
-                                        {{ form.as_p }}
-                                        <button type="submit">Добавить</button>
                                         Аватар: <strong class="float-right">
                                             <img src="{{user.profile.image.url}}" class="rounded-circle" alt=""
-                                                width="150px" height="150px"></strong>
+                                                width="50px" height="50px"></strong>
                                 </li>
                             </ul>
                         </div>
