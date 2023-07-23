@@ -14,6 +14,36 @@
       Также планируется расширить количество калькуляторов, например, для сложных рам и ферм.</p>
   </div>
   <p class="text-center">Поддержать нас: 8-800-535-35-35</p>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 col-lg-offset-0">
+
+            <div class="row pad">
+                <div class="col-lg-12">
+                    <div class="panel panel-primary">
+                        <div class="card-body">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    Имя пользователя: <strong class="float-right">{{request.user}}</strong>
+                                </li>
+                                <li class="list-group-item">
+                                    Полное имя: <strong class="float-right">{{request.user.get_full_name}}</strong>
+                                </li>
+                                <li class="list-group-item">
+                                    Email: <strong class="float-right">{{request.user.email}}</strong>
+                                </li>
+                                <li class="list-group-item">
+                                        Аватар: <strong class="float-right">
+                                            <img src="{{user.profile.image.url}}" class="rounded-circle" alt=""
+                                                width="50px" height="50px"></strong>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <div class= "row p-2"> </div>
 				<div class= "row p-2"> </div>
@@ -21,22 +51,4 @@
 				<div class= "row p-2"> </div>
 				<div class= "row p-2"> </div>
 				<div class= "row p-2"> </div>
-				<div class= "row p-2"> </div>
-				<div class= "row p-2"> </div>
-        <div class= "row p-2"> </div>
-				<div class= "row p-2"> </div>
-				<div class= "row p-2"> </div>
-				<div class= "row p-2"> </div>
-				<div class= "row p-2"> </div>
-				<div class= "row p-2"> </div>
-				<div class= "row p-2"> </div>
-				<div class= "row p-2"> </div> 
-        <div class= "row p-2"> </div>
-				<div class= "row p-2"> </div>
-				<div class= "row p-2"> </div>  
-        <div class= "row p-2"> </div>
-				<div class= "row p-2"> </div>
-				<div class= "row p-2"> </div>  
-        <div class= "row p-2"> </div>
-				<div class= "row p-2"> </div>        
 {% endblock %}

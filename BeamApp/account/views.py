@@ -1,7 +1,9 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.contrib.auth import authenticate, login
-from .forms import LoginForm, UserRegistrationForm
+from .forms import LoginForm, UserRegistrationForm, ProfileForm
+from chat.models import Profile
+from django.contrib.auth.models import User
 
 def user_login(request):
     if request.method == 'POST':
@@ -26,9 +28,11 @@ def user_login(request):
 from django.contrib.auth.decorators import login_required
 @login_required
 def accountpage(request):
-    return render(request,
-        'account/accountpage.html',
-        {'section': 'account'})
+    return render(request, 'account/accountpage.html')
+
+
+
+
 
 def register(request):
     if request.method == 'POST':
@@ -42,6 +46,8 @@ def register(request):
                 user_form.cleaned_data['password'])
             # Сохранить объект User
             new_user.save()
+            profile = Profile(user=new_user)
+            profile.save()
             return render(request,
                         'account/register_done.html',
                         {'new_user': new_user})
