@@ -23,7 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('landing/', include('landing.urls', namespace='landing')),
     path('account/', include('account.urls')),
-    path('about/', include('about.urls', namespace='about')),
+    path('', include('about.urls', namespace='about')),
     path('work/', include('work.urls', namespace='work')),
     path('spring/', include('spring.urls', namespace='spring')),
     path('chat/', include('chat.urls', namespace='chat')),

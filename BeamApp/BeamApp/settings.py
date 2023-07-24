@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+from django.core.mail import send_mail
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +27,7 @@ SECRET_KEY = 'django-insecure-&rvz$dsp6ki#f_nbhwh@g-t&#9p0rj6*t=%%z_#lg&khh1ky%h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -147,8 +148,15 @@ LOGIN_REDIRECT_URL = 'account'
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
+DEFAULT_FROM_EMAIL = 'beamapp@bk.ru'
+SERVER_EMAIL = 'beamapp@bk.ru'
+EMAIL_HOST = 'smtp.mail.ru'
+EMAIL_HOST_USER= 'beamapp@bk.ru'
+EMAIL_HOST_PASSWORD = '6rphGYaMJ7MsXinbz4dy'
+EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+#balkaonlinebalkaonline007
 # ASGI_APPLICATION = 'BeamApp.routing.application'
 
 # Managing Media
